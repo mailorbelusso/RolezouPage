@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="robots" content="index,follow" />
+
+    <title>Padrões de Segurança Infantil (CSAE) | Rolezou</title>
+    <meta name="description"
+        content="Padrões de Segurança Infantil (CSAE) do Rolezou: tolerância zero a abuso e exploração sexual infantil e como denunciar." />
+
+    <!-- Optional: fonts (safe even if blocked; it will fallback) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg0: #05061c;
+            --bg1: #0b0f3a;
+            --card: #0f153f;
+            --text: #eef0ff;
+            --muted: #b7bde6;
+            --line: rgba(255, 255, 255, .10);
+            --accent: #7b7dff;
+            --accent2: #2ee6a6;
+            --danger: #ff4d6d;
+            --shadow: 0 20px 50px rgba(0, 0, 0, .45);
+            --radius: 18px;
+            --maxw: 980px;
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html,
+        body {
+            height: 100%
+        }
+
+        body {
+            margin: 0;
+            font-family: Poppins, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+            color: var(--text);
+            background:
+                radial-gradient(1100px 700px at 20% -10%, rgba(123, 125, 255, .35), transparent 55%),
+                radial-gradient(900px 600px at 85% 10%, rgba(46, 230, 166, .18), transparent 60%),
+                linear-gradient(180deg, var(--bg0), var(--bg1));
+        }
+
+        a {
+            color: inherit
+        }
+
+        .wrap {
+            max-width: var(--maxw);
+            margin: 0 auto;
+            padding: 28px 18px 64px
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            padding: 10px 0 22px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .logoMark {
+            width: 44px;
+            height: 44px;
+            border-radius: 14px;
+            background: linear-gradient(135deg, rgba(123, 125, 255, 1), rgba(46, 230, 166, .95));
+            box-shadow: 0 12px 25px rgba(123, 125, 255, .25);
+        }
+
+        .brandText {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.1;
+        }
+
+        .brandText strong {
+            font-size: 16px;
+            letter-spacing: .6px
+        }
+
+        .brandText span {
+            font-size: 12px;
+            color: var(--muted)
+        }
+
+        nav {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: flex-end
+        }
+
+        nav a {
+            text-decoration: none;
+            border: 1px solid var(--line);
+            padding: 8px 12px;
+            border-radius: 999px;
+            color: var(--muted);
+            transition: .15s ease;
+        }
+
+        nav a:hover {
+            border-color: rgba(123, 125, 255, .55);
+            color: var(--text)
+        }
+
+        .hero {
+            margin-top: 6px;
+            padding: 22px 22px 18px;
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            background: linear-gradient(180deg, rgba(255, 255, 255, .05), rgba(255, 255, 255, .02));
+            box-shadow: var(--shadow);
+        }
+
+        .kicker {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 12px;
+            color: var(--muted);
+            border: 1px solid var(--line);
+            padding: 6px 10px;
+            border-radius: 999px;
+            margin-bottom: 10px;
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 99px;
+            background: var(--accent2)
+        }
+
+        h1 {
+            margin: 6px 0 8px;
+            font-size: 28px
+        }
+
+        .sub {
+            margin: 0;
+            color: var(--muted);
+            font-size: 14px;
+            max-width: 72ch
+        }
+
+        .grid {
+            margin-top: 18px;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 14px;
+        }
+
+        @media (min-width: 860px) {
+            .grid {
+                grid-template-columns: 1.2fr .8fr
+            }
+        }
+
+        .card {
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            background: rgba(15, 21, 63, .65);
+            box-shadow: var(--shadow);
+            padding: 18px 18px 16px;
+        }
+
+        h2 {
+            margin: 0 0 10px;
+            font-size: 16px
+        }
+
+        p {
+            margin: 0 0 12px;
+            color: var(--muted);
+            font-size: 13px;
+            line-height: 1.65
+        }
+
+        ul {
+            margin: 0 0 12px;
+            padding-left: 18px;
+            color: var(--muted);
+            font-size: 13px;
+            line-height: 1.65
+        }
+
+        li {
+            margin: 6px 0
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 7px 10px;
+            border-radius: 999px;
+            border: 1px solid var(--line);
+            background: rgba(255, 255, 255, .04);
+            margin: 6px 0 10px;
+        }
+
+        .badge .warn {
+            width: 9px;
+            height: 9px;
+            border-radius: 99px;
+            background: var(--danger)
+        }
+
+        .cta {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 14px;
+            border-radius: 14px;
+            border: 1px dashed rgba(123, 125, 255, .45);
+            background: rgba(123, 125, 255, .10);
+        }
+
+        .cta strong {
+            font-size: 13px
+        }
+
+        .cta a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            text-decoration: none;
+            border-radius: 12px;
+            padding: 10px 12px;
+            border: 1px solid rgba(123, 125, 255, .55);
+            background: rgba(123, 125, 255, .15);
+            color: var(--text);
+            font-weight: 600;
+        }
+
+        .small {
+            font-size: 12px;
+            color: var(--muted)
+        }
+
+        footer {
+            margin-top: 22px;
+            padding-top: 14px;
+            border-top: 1px solid var(--line);
+            color: var(--muted);
+            font-size: 12px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: space-between;
+        }
+
+        .mono {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <header>
+            <a class="brand" href="/" aria-label="Rolezou - Página inicial">
+                <div class="logoMark" aria-hidden="true"></div>
+                <div class="brandText">
+                    <strong>ROLEZOU</strong>
+                    <span>Rede social focada em eventos</span>
+                </div>
+            </a>
+
+            <nav aria-label="Links rápidos">
+                <a href="/">Voltar ao site</a>
+                <a href="#como-denunciar">Como denunciar</a>
+                <a href="#contato">Contato</a>
+            </nav>
+        </header>
+
+        <section class="hero">
+            <div class="kicker"><span class="dot" aria-hidden="true"></span>Child Safety Standards • CSAE</div>
+            <h1>Padrões de Segurança Infantil (CSAE)</h1>
+            <p class="sub">
+                O Rolezou tem <strong>tolerância zero</strong> a abuso e exploração sexual infantil (CSAE) e a qualquer
+                material
+                de abuso sexual infantil (CSAM). Esta página descreve nossos padrões, como reportar e como agimos.
+            </p>
+        </section>
+
+        <div class="grid">
+            <main class="card">
+                <h2>Compromisso do Rolezou</h2>
+                <p>
+                    Não permitimos conteúdo, comportamento ou interação que envolva menores de idade de forma sexual,
+                    exploratória, coercitiva ou abusiva. Isso inclui tentativas de aliciamento (grooming), sextorsão,
+                    tráfico/exploração sexual e qualquer conteúdo sexual envolvendo menores — real ou gerado/alterado
+                    por IA.
+                </p>
+
+                <div class="badge"><span class="warn" aria-hidden="true"></span> Tolerância zero a CSAE/CSAM</div>
+
+                <h2>O que é proibido</h2>
+                <ul>
+                    <li><strong>CSAM:</strong> qualquer imagem, vídeo, áudio ou conteúdo sexual envolvendo menores.</li>
+                    <li><strong>Grooming/aliciamento:</strong> tentativas de ganhar confiança de menor com objetivo
+                        sexual.</li>
+                    <li><strong>Sextorsão envolvendo menores:</strong> chantagem sexual, ameaças ou coerção.</li>
+                    <li><strong>Exploração sexual e tráfico:</strong> aliciamento, facilitação, comercialização ou
+                        incentivo.</li>
+                    <li><strong>Sexualização de menores:</strong> conteúdo sugestivo, fetichização, “age play” e
+                        variações.</li>
+                    <li><strong>Solicitação de nudez/conteúdo sexual</strong> de/para menores, mesmo “consensual”.</li>
+                </ul>
+
+                <h2 id="como-denunciar">Como denunciar</h2>
+                <p>
+                    Se você vir ou suspeitar de CSAE/CSAM, denuncie imediatamente. Você pode reportar:
+                </p>
+                <ul>
+                    <li><strong>No app:</strong> use o recurso de <strong>Denúncia/Report</strong> disponível na
+                        experiência do Rolezou (perfil, mensagem, mídia ou evento).</li>
+                    <li><strong>Por e-mail:</strong> envie detalhes para <span class="mono">contato@rolezou.com</span>
+                        com o assunto <span class="mono">“CSAE/Child Safety”</span>.</li>
+                </ul>
+                <p class="small">
+                    Inclua, se possível, link/ID do perfil, evento ou mensagem, prints e uma breve descrição do
+                    ocorrido.
+                    Não compartilhe conteúdo ilegal — apenas os identificadores necessários para investigação/moderação.
+                </p>
+
+                <h2>Como agimos após uma denúncia</h2>
+                <ul>
+                    <li>Investigamos denúncias prioritárias com urgência, especialmente quando envolvem segurança
+                        infantil.</li>
+                    <li>Podemos <strong>remover conteúdo</strong>, <strong>restringir funcionalidades</strong>,
+                        <strong>suspender</strong> ou <strong>banir contas</strong>.</li>
+                    <li>Quando aplicável, preservamos registros essenciais para apuração e cooperação com autoridades
+                        competentes.</li>
+                </ul>
+
+                <h2>Cooperação e conformidade</h2>
+                <p>
+                    O Rolezou coopera com solicitações legais válidas e com autoridades competentes, conforme a
+                    legislação aplicável,
+                    para combater abuso e exploração sexual infantil.
+                </p>
+
+                <p class="small">
+                    <strong>Última atualização:</strong> <span class="mono">2026-02-19</span>
+                </p>
+            </main>
+
+            <aside class="card" id="contato">
+                <h2>Contato de segurança infantil</h2>
+                <p>
+                    Para comunicações relacionadas a CSAE/CSAM e segurança infantil:
+                </p>
+
+                <div class="cta">
+                    <strong>E-mail</strong>
+                    <a href="mailto:contato@rolezou.com?subject=CSAE%2FChild%20Safety%20-%20Rolezou">
+                        contato@rolezou.com
+                    </a>
+                    <div class="small">
+                        Assunto sugerido: <span class="mono">CSAE/Child Safety - Rolezou</span>
+                    </div>
+                </div>
+
+                <h2 style="margin-top:14px;">Boas práticas</h2>
+                <ul>
+                    <li>Se houver risco imediato, procure ajuda local/autoridades.</li>
+                    <li>Não compartilhe CSAM — denuncie pelos canais apropriados.</li>
+                    <li>Proteja crianças e adolescentes: reporte qualquer suspeita.</li>
+                </ul>
+
+                <p class="small">
+                    Esta página existe para atender requisitos de “Child Safety Standards / CSAE” em plataformas de
+                    distribuição
+                    e reforçar nosso compromisso com uma comunidade segura.
+                </p>
+            </aside>
+        </div>
+
+        <footer>
+            <div>© Rolezou — Todos os direitos reservados.</div>
+            <div>
+                <a href="/child-safety.html" style="text-decoration:none;">Padrões de Segurança Infantil (CSAE)</a>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
